@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<manifest xmlns="http://tizen.org/ns/packages" api-version="2.3" package="info.mygames888.fastTMXLayerTest" version="1.0.0">
+    <ui-application appid="info.mygames888.fastTMXLayerTest" exec="hellocpp" multiple="false" nodisplay="false" taskmanage="true" type="capp">
+        <label>FastTMXLayerTest</label>
+        <icon>FastTMXLayerTest.png</icon>
+    </ui-application>
+</manifest>

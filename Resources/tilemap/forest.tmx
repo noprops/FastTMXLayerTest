@@ -1,0 +1,429 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<map version="1.0" orientation="orthogonal" width="180" height="120" tilewidth="50" tileheight="50">
+ <properties>
+  <property name="createTileLayersFromMap" value="false"/>
+ </properties>
+ <tileset firstgid="1" name="forest" tilewidth="50" tileheight="50" spacing="4" margin="4">
+  <image source="forest.png" width="1080" height="1512"/>
+ </tileset>
+ <tileset firstgid="561" name="water" tilewidth="50" tileheight="50" spacing="4" margin="4">
+  <image source="water_forest.png" width="648" height="648"/>
+ </tileset>
+ <tileset firstgid="705" name="mapID" tilewidth="50" tileheight="50">
+  <image source="mapID.png" width="300" height="400"/>
+  <tile id="0">
+   <properties>
+    <property name="mapID" value="ground"/>
+   </properties>
+  </tile>
+  <tile id="2">
+   <properties>
+    <property name="mapID" value="lava"/>
+   </properties>
+  </tile>
+  <tile id="4">
+   <properties>
+    <property name="mapID" value="water"/>
+   </properties>
+  </tile>
+  <tile id="12">
+   <properties>
+    <property name="mapID" value="ice"/>
+   </properties>
+  </tile>
+  <tile id="14">
+   <properties>
+    <property name="mapID" value="sky"/>
+   </properties>
+  </tile>
+  <tile id="16">
+   <properties>
+    <property name="mapID" value="wall"/>
+   </properties>
+  </tile>
+  <tile id="24">
+   <properties>
+    <property name="mapID" value="wallfragile"/>
+   </properties>
+  </tile>
+  <tile id="26">
+   <properties>
+    <property name="mapID" value="wallunwalkable"/>
+   </properties>
+  </tile>
+  <tile id="28">
+   <properties>
+    <property name="mapID" value="nonwall"/>
+   </properties>
+  </tile>
+  <tile id="36">
+   <properties>
+    <property name="mapID" value="nonwallunwalkable"/>
+   </properties>
+  </tile>
+  <tile id="38">
+   <properties>
+    <property name="mapID" value="tree"/>
+   </properties>
+  </tile>
+ </tileset>
+ <layer name="groundLayer0" width="180" height="120">
+  <data encoding="base64" compression="gzip">
+   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
+  </data>
+ </layer>
+ <layer name="groundLayer1" width="180" height="120">
+  <data encoding="base64" compression="gzip">
+   H4sIAAAAAAAAA+3at25VQRSG0Wu/g/0ODj3R2D3R2D3RoSc6EBqCBE5AQ5DI4RUID8df+EpTn1MMd1hL+rSbKXa1qxkMAAAAAAAAAABo2VSaTjPFnK26EXQ3lybT/OGcSAs1F4IeFtN4WjqcY2m56kbQ3fA+TwzcZ0bf8D6PDdxnRt9KWk1rxVyvuhF0t5E201Yxt6tuBN3tpN20V8z9qhtBd+4zLXGfaYn7DAAAALTiSDqajqXj6UQ6WfE99HE6nUln07l0Pl2o+B76uJQupyvparqWrld8D33cSDfTrXQ73Ul3K76HPp6kp+lRepyepecV30Mfb9O79Dq9Se/Th4rvAQAAAOB/5v8GLfF/g5b4v0FL/N+gJf5v0BL/NwAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAD4l0yl6TRTzNmqG0F3c+lUmi/mQs2FoIfFdDGNpfG0lJarbgTdDe/zRJocuM+MtuF9Xiqm+8yoWkmraa2Y61U3gu420mbaKuZ21Y2gu520m/aKuV91I+juY/qUPhfzS9WNoDv3mZa4z7TEfaYl7jMtcZ9piftMS9xnWnIv3U8Pivmw5kLQw0F6kV4W81XVjaC7r+lb+l7MH1U3gu5+pl/pdzH/VN0IAAAAAAAAAAAAoA1/AdVar1yAUQEA
+  </data>
+ </layer>
+ <layer name="groundLayer2" width="180" height="120">
+  <data encoding="base64" compression="gzip">
+   H4sIAAAAAAAAA+3dOU4kQRCG0WRxYGA8FofVhDOwXIHl/tIMDDdgtYhSa3xSDZ3o5z0pVE5I2Ubq86q6NQAAAAAAABbpoma3Y3+nZvuLfgvM66bmtmP/qmb5i34LzGvq82XH/lnTZ74vfSaJPpNEn0mizyTRZ5LoM0n0mST6TBJ9Jok+k2Tq82rNac3JB54rTZ/5vrbarLe9TwAAALL9WWrt79LH9+9q975j/1/tPnTswzwe6649ddy359p96dh/rd039xkAAAAAAACAT7a23Np6xwspv2p3o2N/s3Z/e+GFBdmru7bfcd8OavewY/+odo/dZwAAAAAAAAAAAAAAAAAAAAAAAAAAgB9v+qvhkZ+rHX0+WbZqdgeev1OzPfB8skx9vB14/lXN9cDzyTL1+XLg+Wc15wPPJ4s+k0SfSaLPJNFnkugzSfSZJPpMEn0miT6TRJ9Jos8k0WeS6DNJ9Jkk+kwSfSaJPpNEn0mizyTRZ5LoM0n0mST6TBJ9Jok+k0SfSaLPJNFnkkx9Xq05rTkZ8Fxpvv/M55n6PH1/+aLNOrno5//zAQAAAAAAAAAAAJh5B1Bp/vKAUQEA
+  </data>
+ </layer>
+ <layer name="groundLayer3" width="180" height="120">
+  <data encoding="base64" compression="gzip">
+   H4sIAAAAAAAAA+2dWW4UMRRFUx/QbIFhCwzbYtwB4w5CIDsIAXbA+J+B8Z9hCwwL4EmoPzpQZZfr1XXZPkd6uhG03O7q6MSyPOx0W1uPrHbIWRM07NuzftqRcydoyO2tVhI05PZWKwkacnurlQQNub3VSoKG3N5qJUFDbm+1kqDB20PnrS5YvbJ6HZFnrc45vv/c/U/tL2jw9tBlqytWH6w+RuRFq0uO7z93/1P7Cxq8/fbYanfE97dtr33o+P5z9z+1v6DB22/PrJ6P+P727LVPHN9/7v6n9hc04Gf8XBP4GT/XBH7ezCPr0/FAfw+sDhOeG2jAz5v5zfr0faC/X6y+Jjw30ICfN/OX9em31XX7+Ub3b/6w//uZ8NxAA37ezJXVGau7Vvf+k6esTie0CxrwsyZBA37WJGjw8s963cMbq7cjvr8X9tqXXfx6D69UrxsBDV7+Wa97+GT1ecT3985e+76LX+/hlep1I6DBc9w8ZpyRG/W4HTR4jpvHjDNyox63g4Zc8xq5wc91kmteIzcpfl7PPePn5dKqn8fOq0ydDwENrfp57LzK1PkQ0NCqn8cydbwNGlr181imzoeABvwcB34uA/wcB34uA/wcB34uA/wcB34uA/wcB34uA/wcB34uA/wcR+q+bvysBT/HkbqvGz9radXPV62v17r+fdxe+7rxs5ZW/Xzb+nqn69/H3Zf4edm06ufY9XVe+wxBQ6t+jl1f57XPEDS06udYtp2eD2ho1c+x7Dk9H9CAn4fBz2WBn4fBz2WBn4fBz2WBn4fBz2WBn4fBz2WBn4fBz2WBn4eZuq4OP2vx8nPo3pFSmbquDj9r8fJz6N6R1LxpdWvg92HsOrmx6+WmrqvDz1q8/Lzqhu8dSc37Vg8Gfh9S18ml3oOCn5eNl5/nyrnua1UnaFD5aa55k1LuXwENub2Fn8GT3N7Cz+BJbm/hZ/Akt7fwM3ji5Z/1/YPe9wSG7jNMvb+Q+wfrxMs/6/sHve8JDN1nmHp/IfcP1olqnLs0+sbdob8zqV4HDapx7tLoG3eH/s6keh004GfNfApowM+a+RTQgJ/xc03gZ/xcE/gZP9cEft78HKF9Nqn7VUADft78HKF9Nqn7VUBDq37u8+yqG95nk7qvBTTU5ufY/YRe+wLx87Kozc+x+wnZP1gntfl5qeuhQUNtfl7qemjQgJ/xc03gZ/xcE/gZP9cEfsbPNYGf8XNN4Gf8XBP4GT/XBH7GzzWBn/FzTeBn/FwT+Bk/10Ttfl51f9czp34ur3V4oKF2P089V8/rnDvQULufp56r53XOHWio3c87E/vF/bBlUbuf9yf2i/thywI/h9vDz+WAn8Pt4edywM/h9vBzOeDncHv4uRzwc7g9/FwO+DncHn4uB/wcbg8/lwN+DreHn8sBP4fbw8/lgJ/D7eHncqjdz0f2b8cT2juwOtzCz6Xg5efQufYqTp7rPLVfqefx4+c8ePk5dK69Kk+e6zy1X17nRIMGLz+vuuFz7VXZt58ktT2v5wMavPxM4ucl4OUfEj8vgdzeaiVBQ25vtZKgIbe3WknQkNtbrSRoyO2tVhI05PZWKwkacnurlQQNub3VSoKG3N5qJUFDbm+1kqAht7daSdCQ21utJGj4A4Pd7d2AUQEA
+  </data>
+ </layer>
+ <layer name="warehouseLayer" width="180" height="120">
+  <data encoding="base64" compression="gzip">
+   H4sIAAAAAAAAA+3UUQ2AAAxDQayDB/AAHkAbs8D4WZq7pKmDtywAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAD8cdauxsNEd+1pPEy01rbGw0R77Wg8TKTPJNFnkugzSfSZJPpMEn0miT6TRJ9Jos8k0WeS6DNJ9JlEuksS3QUAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA4IsXjdMFMIBRAQA=
+  </data>
+ </layer>
+ <layer name="waterLayer" width="180" height="120">
+  <properties>
+   <property name="hasAnimation" value="true"/>
+  </properties>
+  <data encoding="base64" compression="gzip">
+   H4sIAAAAAAAAA+3cu2rDQBAF0EV/FGKIX7Itv///izylMIoiFUHe4Ry4TLOFiuEWu6CvpgAAAAAAAAAAAAAAAAAAAAAAAAAAf9g0pWwju5G5948/KtHGrh4ix8g68ojc3+bTPlOJLnb1HLlErvaWyvX7+WSfqZx+JhP9TCb6mUz0M5n0+3nl/pnK3Qbum90/AwAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAQN02TSnbyG7G3DdLfzUMa2M3D5HjjHmyz3yoLnbzHLnMmFf7zIfq9/M68ojcB+aPfqYC3cTenXoOltRO7N2p52BJ+plM9DOZ6Gcy0c9k0u/d1ci74Ld+pgLeB8nE+yCZ3H55DxybT/sMAAAAAAAAAAAAAMA/eQF8GYkrgFEBAA==
+  </data>
+ </layer>
+ <layer name="overCharacterLayer0" width="180" height="120">
+  <data encoding="base64" compression="gzip">
+   H4sIAAAAAAAAA+3dyRGCQBAF0CEC1wxc03DNwDX/QOy7ioOCC75X9esfoCgOc+yGlAAAAAAAAAAAAADyrIqU1sV1wy86xNk9FtcNAAAAAAAAwH/pRLqRXqQfGUSGH7wfXjGKjCOTyDQyi8w/eD8AAAAAAADwP3ZFSvsb+9v2uslhfoM2Mb8BAAAAAAAAwDe799+RZ3sT2ZbMAy3i2vKJ50KO3Hm13D5FziXnr+qcXNUGAAAAAAAAAAAAAADex14LbWJfhW+Qu08IvyB3nxAAAAAAAAAAAAAAAAAAAAAAAAAAAIB2e/Td5aYb6vTou8tNd93vBQAAAAAAAAAAAAAATbgASl0ds4BRAQA=
+  </data>
+ </layer>
+ <layer name="mapIDLayer" width="180" height="120">
+  <data encoding="base64" compression="gzip">
+   H4sIAAAAAAAAA+3cS0odQRiAUcn+N5WAJqCgE92BSSCPNaQnDiK3vO21u/9HnUHxTZrq8kIdiqLx+dPV1fdlPKs26K9l/FZt0uj9pMpnVT5r/0bvJ1U+q/JZ+zd6P6nyWXVbn38s4+cbvV/Gw4qemyeqn5fx5USj/dF9fP6zjL9v9HEZTyt6bp6ofl3GtxON9kdjfR45x+d1Ha1jq3VVn/9on0fO8XldR+vYal3V5+dzbZ9H68vqJ59zNKvPo/Vl9ZPPuRvtczU/+Zy70T5X87Obz1Xvn/lcY/6jfa56/8znGvPzmc+d5ucznzvNv7fPa/djdKv4PPLO/Mf4vHY/RreKzyPvzM/nDj4rnzv5rHzm8zzlM5879SifR/NEPf/S62XcrCifa/Qon0fzRD3/0ttl3K0on2uUz/87fO68He2P8vk9Pp87b0f7o3zm8zzlM5879Sifs5bPvXqUz1nL517l89z3z2t/p73n3+p9fJ77/nnt77T3/Fu9b1afR+s/1yye8pnPp87D1b7f+KhffN7G5/fu372fr+bz1o7x+WM+v3f/7v18NZ+3dozPvXy+9JzNZz5n9PnSczaf+cxnPvOZz3zO63PVZvH5tXdV5u/qc9Vm8fm1d1Xm53OuZvO5Wvmcq9l8rlY+5yqfc57L+cznDE7v/Z6tfd6ra/3cu9HO6bE+79W1fnb7/8/KZz7PWz7zuVP5zOdO5TOfO5XPfO5UPvO5U/mc2+e9vnvuWj7n9nn0d0c7mLVb+xz9vcWl32XwuUe39nnkSbbyuWejzs/Zfc7iYpZ1VGnU+Tm7z1lczLKOKuVzbp+Vz5181lifo93l89zd2udod/k8d/mc+/5Z+byFz1nun3Vunz9678Ln2u3mc7fvNzSHz/fLeAgon+fuXj4/LuMpoHyeu3zmc6fymc+dymc+dyqf+dypfOZzp/KZz53KZz53Kp/53Kl85nOn8pnPnZrF59H3cnzWij6Pvpfjs/KZz7OWz3zu1Fl8vl7GzQXlc63O4vPtMu4uKJ9rNYvPe98/83mOZvF57/tnPs/RWX0endf5XLuz+jw6r/O5dvnM507lM587lc987lQ+87lTZ/V5bflcq7P6vLZ8rlU+87lT+cznTt3a5+6N9keP9bl7o/1RPvN5nvKZz53KZz53Kp/53KnR+0k1g8+qGRu9n1T5rMpn7d/o/aTKZ1U+a/9G7ydVPque7j9yomyygFEBAA==
+  </data>
+ </layer>
+ <objectgroup name="objectGroup" width="180" height="120">
+  <object name="RRGTree" x="2128" y="2928" width="46" height="46">
+   <properties>
+    <property name="condition" value="treesInForest"/>
+    <property name="nodeName" value="tree1"/>
+   </properties>
+  </object>
+  <object name="RRGBuildingEntrance" x="1422" y="1624" width="46" height="46">
+   <properties>
+    <property name="direction" value="north"/>
+    <property name="number" value="1"/>
+   </properties>
+  </object>
+  <object name="RRGBuildingEntrance" x="1422" y="2222" width="45" height="45">
+   <properties>
+    <property name="direction" value="north"/>
+    <property name="number" value="4"/>
+   </properties>
+  </object>
+  <object name="RRGDestination" x="1424" y="1728" width="45" height="45">
+   <properties>
+    <property name="number" value="11"/>
+   </properties>
+  </object>
+  <object name="RRGDestination" x="1432" y="2334" width="45" height="45">
+   <properties>
+    <property name="number" value="14"/>
+   </properties>
+  </object>
+  <object name="RRGWarpPointInLevel" x="5420" y="1118" width="45" height="45">
+   <properties>
+    <property name="direction" value="south"/>
+    <property name="number" value="11"/>
+   </properties>
+  </object>
+  <object name="RRGDestination" x="5416" y="1026" width="45" height="45">
+   <properties>
+    <property name="number" value="1"/>
+   </properties>
+  </object>
+  <object name="RRGDestination" x="5428" y="2218" width="45" height="45">
+   <properties>
+    <property name="number" value="4"/>
+   </properties>
+  </object>
+  <object name="RRGWarpPointInLevel" x="5418" y="2326" width="45" height="45">
+   <properties>
+    <property name="direction" value="south"/>
+    <property name="number" value="14"/>
+   </properties>
+  </object>
+  <object name="RRGBuildingEntrance" x="2024" y="1624" width="45" height="45">
+   <properties>
+    <property name="direction" value="north"/>
+    <property name="number" value="2"/>
+   </properties>
+  </object>
+  <object name="RRGBuildingEntrance" x="2624" y="1616" width="45" height="45">
+   <properties>
+    <property name="direction" value="north"/>
+    <property name="number" value="3"/>
+   </properties>
+  </object>
+  <object name="RRGBuildingEntrance" x="2026" y="2222" width="45" height="45">
+   <properties>
+    <property name="direction" value="north"/>
+    <property name="number" value="5"/>
+   </properties>
+  </object>
+  <object name="RRGBuildingEntrance" x="2626" y="2220" width="45" height="45">
+   <properties>
+    <property name="direction" value="north"/>
+    <property name="number" value="6"/>
+   </properties>
+  </object>
+  <object name="RRGDestination" x="2020" y="1726" width="45" height="45">
+   <properties>
+    <property name="number" value="12"/>
+   </properties>
+  </object>
+  <object name="RRGDestination" x="2620" y="1718" width="45" height="45">
+   <properties>
+    <property name="number" value="13"/>
+   </properties>
+  </object>
+  <object name="RRGDestination" x="2028" y="2330" width="45" height="45">
+   <properties>
+    <property name="number" value="15"/>
+   </properties>
+  </object>
+  <object name="RRGDestination" x="2628" y="2320" width="45" height="45">
+   <properties>
+    <property name="number" value="16"/>
+   </properties>
+  </object>
+  <object name="RRGDestination" x="6614" y="1022" width="45" height="45">
+   <properties>
+    <property name="number" value="2"/>
+   </properties>
+  </object>
+  <object name="RRGDestination" x="7822" y="1026" width="45" height="45">
+   <properties>
+    <property name="number" value="3"/>
+   </properties>
+  </object>
+  <object name="RRGWarpPointInLevel" x="6618" y="1114" width="45" height="45">
+   <properties>
+    <property name="direction" value="south"/>
+    <property name="number" value="12"/>
+   </properties>
+  </object>
+  <object name="RRGWarpPointInLevel" x="7822" y="1120" width="45" height="45">
+   <properties>
+    <property name="direction" value="south"/>
+    <property name="number" value="13"/>
+   </properties>
+  </object>
+  <object name="RRGDestination" x="6620" y="2226" width="45" height="45">
+   <properties>
+    <property name="number" value="5"/>
+   </properties>
+  </object>
+  <object name="RRGDestination" x="7716" y="2420" width="45" height="45">
+   <properties>
+    <property name="number" value="6"/>
+   </properties>
+  </object>
+  <object name="RRGWarpPointInLevel" x="6620" y="2326" width="45" height="45">
+   <properties>
+    <property name="direction" value="south"/>
+    <property name="number" value="15"/>
+   </properties>
+  </object>
+  <object name="RRGWarpPointInLevel" x="7722" y="2524" width="45" height="45">
+   <properties>
+    <property name="direction" value="south"/>
+    <property name="number" value="16"/>
+   </properties>
+  </object>
+  <object name="RRGTeleportInLevel" x="5320" y="3026" width="45" height="45">
+   <properties>
+    <property name="direction" value="south"/>
+    <property name="number" value="100"/>
+   </properties>
+  </object>
+  <object name="RRGDestination" x="5318" y="3224" width="45" height="45">
+   <properties>
+    <property name="number" value="99"/>
+   </properties>
+  </object>
+  <object name="RRGDestination" x="1224" y="3428" width="45" height="45">
+   <properties>
+    <property name="number" value="100"/>
+   </properties>
+  </object>
+  <object name="RRGDungeonEntrance" x="2818" y="3318" width="45" height="45">
+   <properties>
+    <property name="dungeonName" value="Cavern_of_Hajimari"/>
+   </properties>
+  </object>
+  <object name="RRGBoard" x="5320" y="3120" width="45" height="45">
+   <properties>
+    <property name="message" value="Under Construction"/>
+   </properties>
+  </object>
+  <object name="RRGTree" x="2228" y="2928" width="45" height="45">
+   <properties>
+    <property name="condition" value="treesInForest"/>
+    <property name="nodeName" value="tree2"/>
+   </properties>
+  </object>
+  <object name="RRGTree" x="2322" y="2932" width="45" height="45">
+   <properties>
+    <property name="condition" value="treesInForest"/>
+    <property name="nodeName" value="tree3"/>
+   </properties>
+  </object>
+  <object name="RRGSpaceShipWarpPoint" x="1426" y="3322" width="45" height="45">
+   <properties>
+    <property name="condition" value="spaceShipHasWarpPoint"/>
+   </properties>
+  </object>
+  <object name="RRGDungeonEntrance" x="3324" y="2332" width="45" height="45">
+   <properties>
+    <property name="dungeonName" value="Grasslands"/>
+   </properties>
+  </object>
+  <object name="RRGDungeonEntrance" x="3524" y="1628" width="45" height="45">
+   <properties>
+    <property name="dungeonName" value="Serpent_Swamp"/>
+   </properties>
+  </object>
+  <object name="RRGDungeonEntrance" x="3628" y="630" width="45" height="45">
+   <properties>
+    <property name="dungeonName" value="Fertile_Ground"/>
+   </properties>
+  </object>
+  <object name="RRGDungeonEntrance" x="3626" y="3326" width="45" height="45">
+   <properties>
+    <property name="dungeonName" value="Cavern_of_Owari"/>
+   </properties>
+  </object>
+  <object name="RRGDungeonEntrance" x="1826" y="4424" width="45" height="45">
+   <properties>
+    <property name="dungeonName" value="Dragon_Roost"/>
+   </properties>
+  </object>
+  <object name="RRGDungeonEntrance" x="1321" y="727" width="45" height="45">
+   <properties>
+    <property name="dungeonName" value="Ancient_Ruins"/>
+   </properties>
+  </object>
+  <object name="RRGDungeonEntrance" x="8226" y="1828" width="45" height="45">
+   <properties>
+    <property name="dungeonName" value="Tamara_Burrows"/>
+    <property name="nodeName" value="stairsInWarehouse"/>
+   </properties>
+  </object>
+  <object name="RRGDungeonEntrance" x="3226" y="4828" width="45" height="45">
+   <properties>
+    <property name="dungeonName" value="Lake_of_the_Dead"/>
+   </properties>
+  </object>
+  <object name="RRGPracticeFieldEntrance" x="5415" y="1920" width="58" height="60"/>
+ </objectgroup>
+ <objectgroup name="characterGroup" width="180" height="120">
+  <object name="player" x="1226" y="3436" width="45" height="45">
+   <properties>
+    <property name="direction" value="south"/>
+    <property name="playerPosition" value="1,2,3"/>
+   </properties>
+  </object>
+  <object name="RRGWarehouseKeeper" x="2724" y="2332" width="45" height="45">
+   <properties>
+    <property name="direction" value="south"/>
+   </properties>
+  </object>
+  <object name="RRGNPC" x="1822" y="2516" width="45" height="45">
+   <properties>
+    <property name="message1" value="When it's game over, you lose all of the money and items you have and go back to Level 1."/>
+    <property name="message2" value="You'd better keep the items you don't want to lose in the warehouse."/>
+    <property name="walkPath" value="east,east,west,west,west,west,east,east"/>
+   </properties>
+  </object>
+  <object name="RRGNPC" x="2826" y="1124" width="45" height="45">
+   <properties>
+    <property name="message1" value="Your game data will automatically be saved when you return to the title screen or terminate the game."/>
+    <property name="message2" value="However, if you terminate the game while a turn is in progress, it will be treated as a game over,"/>
+    <property name="message3" value="and the items and money you are holding will be lost."/>
+    <property name="message4" value="Always terminate the game after a turn has ended."/>
+    <property name="message5" value="You'll be safe if you terminate the game after returning to the title screen."/>
+    <property name="walkPath" value="east,east,west,west,west,west,east,east"/>
+   </properties>
+  </object>
+  <object name="RRGNPC" x="1022" y="1426" width="45" height="45">
+   <properties>
+    <property name="message1" value="Until you make a move, the other characters will not move either.\nTake your time to think before making a move."/>
+    <property name="walkPath" value="south,south,north,north"/>
+   </properties>
+  </object>
+  <object name="RRGShopkeeper" x="7730" y="1028" width="45" height="45">
+   <properties>
+    <property name="direction" value="south"/>
+    <property name="nodeName" value="RRGShopkeeper"/>
+   </properties>
+  </object>
+  <object name="RRGSecondhandShopkeeper" x="6530" y="1028" width="45" height="45">
+   <properties>
+    <property name="direction" value="south"/>
+    <property name="nodeName" value="RRGSecondhandShopkeeper"/>
+   </properties>
+  </object>
+  <object name="RRGBanker" x="6630" y="2028" width="45" height="45">
+   <properties>
+    <property name="direction" value="south"/>
+   </properties>
+  </object>
+  <object name="RRGBlacksmith" x="5524" y="728" width="51" height="46">
+   <properties>
+    <property name="direction" value="south"/>
+    <property name="nodeName" value="RRGBlacksmith"/>
+   </properties>
+  </object>
+  <object name="RRGCurseRemover" x="2521" y="1731" width="45" height="45">
+   <properties>
+    <property name="direction" value="south"/>
+   </properties>
+  </object>
+  <object name="RRGPracticeFieldKeeper" x="5422" y="2034" width="42" height="51">
+   <properties>
+    <property name="direction" value="south"/>
+    <property name="nodeName" value="RRGPracticeFieldKeeper"/>
+   </properties>
+  </object>
+ </objectgroup>
+ <objectgroup name="spaceShipGroup" width="180" height="120">
+  <object name="spaceShip" x="1222" y="3426" width="45" height="45"/>
+  <object name="blacksmithMachine" x="5419" y="729" width="61" height="50"/>
+ </objectgroup>
+ <objectgroup name="roomGroup" width="180" height="120">
+  <object x="1024" y="3132" width="2056" height="2026"/>
+  <object x="1012" y="1118" width="2062" height="1452"/>
+  <object x="3510" y="514" width="274" height="268"/>
+  <object x="5218" y="616" width="456" height="460"/>
+  <object x="5315" y="2012" width="269" height="274"/>
+  <object x="1118" y="520" width="458" height="552"/>
+  <object x="3118" y="1422" width="660" height="460"/>
+  <object x="3112" y="2124" width="468" height="446"/>
+  <object x="3528" y="3222" width="244" height="242"/>
+  <object name="SecondhandShop" x="6420" y="622" width="454" height="446"/>
+  <object name="Shop" x="7626" y="624" width="440" height="440"/>
+  <object name="Warehouse" x="7614" y="1818" width="668" height="660"/>
+  <object x="6422" y="1820" width="446" height="450"/>
+  <object x="5224" y="3018" width="246" height="256"/>
+  <object x="3112" y="4718" width="266" height="260"/>
+ </objectgroup>
+</map>
